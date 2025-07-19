@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo Navegador</title>
+</head>
+<body>
+    <h1>JavaScript en el Navegador</h1>
+    <button onclick="mostrarInfo()">Click aquí</button>
+    <div id="resultado"></div>
+    
+    <script>
+        function mostrarInfo() {
+            // Esto SOLO funciona en navegador
+            alert('¡Hola desde el navegador!');
+            
+            // Cambiar el contenido de la página
+            document.getElementById('resultado').innerHTML = 
+                '<p>✅ Esto funciona en navegador</p>' +
+                '<p>📏 Ancho de ventana: ' + window.innerWidth + 'px</p>' +
+                '<p>🔗 URL: ' + window.location.href + '</p>';
+            
+            // Cambiar color de fondo
+            document.body.style.backgroundColor = 'lightblue';
+        }
+    </script>
+</body>
+</html>
